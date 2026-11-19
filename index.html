@@ -770,50 +770,88 @@
         <!-- ---------------------------------------- -->
         <!-- ---------------------------------------- -->
         <!-- ---------------------------------------- -->
-        <!-- ---------------------------------------- -->
-    <!-- STACK CARD 4: RECEPTION CELEBRATION      -->
+    <!-- STACK CARD 4: CEREMONY TIMELINE / EVENTS -->
     <!-- ---------------------------------------- -->
-    <article id="card-events" class="stack-card bg-gradient-to-b from-white/95 via-royal-cream/95 to-amber-50/95 dark:from-[#151c27]/95 dark:via-royal-darkcard/95 dark:to-[#0f141d]/95 p-4 sm:p-7 md:p-8 shadow-2xl text-center overflow-x-hidden">
+    <article id="card-events" class="stack-card bg-gradient-to-b from-white/95 via-royal-cream/95 to-amber-50/95 dark:from-[#151c27]/95 dark:via-royal-darkcard/95 dark:to-[#0f141d]/95 p-3 sm:p-6 md:p-8 shadow-2xl text-center overflow-x-hidden">
       
       <!-- Top Auspicious Badge -->
-      <span class="inline-block text-[10px] sm:text-[11px] font-bold tracking-widest text-royal-gold-dark dark:text-royal-gold px-3.5 py-1 rounded-full bg-royal-gold/15 border border-royal-gold/30 mb-2 font-hindi">
+      <span class="inline-block text-[10px] sm:text-[11px] font-bold tracking-widest text-royal-gold-dark dark:text-royal-gold px-3 py-0.5 sm:py-1 rounded-full bg-royal-gold/15 border border-royal-gold/30 mb-1 font-hindi">
         ॥ मांगलिक क्षणिकाएं ॥
       </span>
 
-      <h2 class="font-rozha text-xl sm:text-2xl md:text-3xl text-royal-maroon dark:text-royal-gold font-bold">
-        आशीर्वाद समारोह एवं स्वरुचिभोज
+      <h2 class="font-rozha text-lg sm:text-2xl md:text-3xl text-royal-maroon dark:text-royal-gold font-bold">
+        उत्सव एवं विवाह कार्यक्रम
       </h2>
-      <p class="text-xs text-stone-800 dark:text-stone-200 mt-1 font-hindi">
-        कृपया सपरिवार पधारकर नवयुगल को अपने स्नेहिल आशीष प्रदान कर हमें अनुग्रहित करें
+      <p class="hidden sm:block text-xs text-stone-800 dark:text-stone-200 mt-0.5 font-hindi">
+        कृपया सभी कार्यक्रमों में सपरिवार पधारकर नवयुगल को अपने स्नेहिल आशीष प्रदान करें
       </p>
 
-      <!-- Prominent Visual Ribbon -->
-      <div class="mt-2.5 sm:mt-3.5 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-royal-maroon/10 via-royal-gold/25 to-royal-maroon/10 dark:from-royal-gold/20 dark:to-royal-gold/10 border border-royal-gold/50 shadow-xs font-hindi">
-        <i class="fa-solid fa-champagne-glasses text-royal-maroon dark:text-royal-gold text-xs"></i>
-        <span class="text-xs font-bold text-royal-maroon dark:text-royal-gold tracking-wide">
-          शाही स्वरुचिभोज एवं आशीर्वचन • गुरुवार, 10 दिसंबर 2026
+      <!-- Prominent Visual Counter & Tap Guide Banner -->
+      <div class="mt-1.5 sm:mt-3 inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-royal-maroon/10 via-royal-gold/25 to-royal-maroon/10 dark:from-royal-gold/20 dark:to-royal-gold/10 border border-royal-gold/50 shadow-xs font-hindi">
+        <i class="fa-solid fa-sparkles text-royal-maroon dark:text-royal-gold text-[9px] sm:text-xs"></i>
+        <span class="text-[10px] sm:text-xs font-bold text-royal-maroon dark:text-royal-gold tracking-wide">
+          कुल 8 पावन मांगलिक प्रसंग • नीचे किसी भी रस्म पर टैप करें
         </span>
       </div>
 
-      <!-- Focused Active Event Card Display (Direct Reception Presentation) -->
-      <div id="activeEventCardContainer" class="mt-4 sm:mt-5 transition-all duration-300">
+      <!-- Quick Day Filter Tabs (Mobile & Tablet Responsive) -->
+      <div class="mt-2.5 sm:mt-3.5 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 font-hindi" id="eventDayFilters">
+        <button id="dayFilterAll" onclick="setEventDayFilter('all')" class="px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all border flex items-center gap-1 shadow-sm cursor-pointer bg-royal-maroon dark:bg-royal-gold text-white dark:text-royal-darkbg border-transparent ring-2 ring-royal-gold/50 scale-105">
+          <i class="fa-solid fa-layer-group text-[9px] sm:text-[10px]"></i>
+          <span class="sm:hidden">सभी 8</span>
+          <span class="hidden sm:inline">सभी 8 कार्यक्रम</span>
+        </button>
+        <button id="dayFilterDay1" onclick="setEventDayFilter('day1')" class="px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all border flex items-center gap-1 shadow-sm cursor-pointer bg-white/90 dark:bg-royal-darkcard/90 text-stone-900 dark:text-stone-100 border-royal-gold/40 hover:bg-royal-gold/15">
+          <i class="fa-regular fa-calendar text-[9px] sm:text-[10px] text-royal-gold"></i>
+          <span class="sm:hidden">09 दिस. (5)</span>
+          <span class="hidden sm:inline">दिन 1 • 09 दिसंबर (5 रस्में)</span>
+        </button>
+        <button id="dayFilterDay2" onclick="setEventDayFilter('day2')" class="px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all border flex items-center gap-1 shadow-sm cursor-pointer bg-white/90 dark:bg-royal-darkcard/90 text-stone-900 dark:text-stone-100 border-royal-gold/40 hover:bg-royal-gold/15">
+          <i class="fa-solid fa-fire text-[9px] sm:text-[10px] text-royal-gold"></i>
+          <span class="sm:hidden">10 दिस. (3)</span>
+          <span class="hidden sm:inline">दिन 2 • 10 दिसंबर (3 रस्में)</span>
+        </button>
+      </div>
+
+      <!-- The 8 Ceremony Buttons:
+           On Mobile: Sleek horizontal swipeable ribbon (no vertical stacking overflow)
+           On Tablet/Desktop: Grand 4-column x 2-row grid -->
+      <div id="eventTabList" class="mt-2.5 sm:mt-4 flex sm:grid sm:grid-cols-4 overflow-x-auto sm:overflow-visible gap-2 sm:gap-2.5 md:gap-3 font-hindi text-left pb-1.5 sm:pb-0 scrollbar-none snap-x">
+        <!-- Injected by JS: 8 prominent ceremony tiles with badges, icons & titles -->
+      </div>
+
+      <!-- Focused Active Event Card Display (Updates IN PLACE, no page jump) -->
+      <div id="activeEventCardContainer" class="mt-3 sm:mt-5 transition-all duration-300">
         <!-- Injected by JS -->
       </div>
 
+      <!-- View All Events Accordion Toggle -->
+      <div class="mt-4 sm:mt-6 pt-2.5 sm:pt-4 border-t border-royal-gold/25 font-hindi">
+        <button id="toggleAllEventsBtn" class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold bg-white/80 dark:bg-royal-darkcard/80 border border-royal-gold/40 text-royal-maroon dark:text-royal-gold hover:bg-royal-gold/15 shadow-xs inline-flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-all">
+          <i class="fa-solid fa-list-check text-royal-gold"></i>
+          <span id="toggleAllEventsText">सभी 8 कार्यक्रम एक साथ सूची रूप में देखें</span>
+          <i id="toggleAllEventsIcon" class="fa-solid fa-chevron-down text-[9px] sm:text-[10px] text-royal-gold transition-transform"></i>
+        </button>
+        <div id="allEventsListContainer" class="hidden mt-3 sm:mt-4 space-y-2 sm:space-y-3 text-left">
+          <!-- Injected when toggled -->
+        </div>
+      </div>
+
       <!-- Helpful Map Note -->
-      <div class="mt-4 sm:mt-5 pt-3 border-t border-royal-gold/15 flex flex-wrap items-center justify-between gap-1.5 text-xs text-stone-700 dark:text-stone-300 font-hindi px-1">
+      <div class="mt-3 sm:mt-5 pt-2 sm:pt-3 border-t border-royal-gold/15 flex flex-wrap items-center justify-between gap-1.5 text-[10px] sm:text-xs text-stone-700 dark:text-stone-300 font-hindi px-1">
         <span class="inline-flex items-center gap-1 text-royal-maroon dark:text-royal-gold font-semibold">
           <i class="fa-solid fa-map-location-dot"></i>
-          <span>समारोह स्थल: पूनम रिसॉर्ट्स, महू इंदौर रोड</span>
+          <span>स्थल: पूनम रिसॉर्ट्स, महू इंदौर रोड</span>
         </span>
         <a href="https://maps.app.goo.gl/LDuV11ndoLZgCsp47" target="_blank" rel="noopener noreferrer" class="hover:underline font-bold text-royal-maroon dark:text-royal-gold inline-flex items-center gap-1">
-          <span>गूगल मैप्स दिशा देखें →</span>
+          <span>गूगल मैप्स दिशा →</span>
         </a>
       </div>
 
     </article>
 
 <!-- ---------------------------------------- -->
+    <!-- ---------------------------------------- -->
     <!-- STACK CARD 5: FAMILY & BLESSINGS         -->
         <!-- ---------------------------------------- -->
     <!-- STACK CARD 5: PRE-WEDDING PHOTO GALLERY  -->
@@ -1038,13 +1076,145 @@
       // मांगलिक कार्यक्रम (पत्रिका अनुसार कुल 8 कार्यक्रम)
       events: [
         {
-          id: "reception",
+          id: "pujan",
           num: "01",
+          icon: "fa-om",
+          title: "श्री गणेश पूजन",
+          shortTitle: "गणेश पूजन",
+          dayGroup: "day1",
+          dayText: "दिन 1 • 09 दिसंबर",
+          date: "बुधवार, 09 दिसंबर 2026",
+          time: "प्रातः 10:00 बजे",
+          fullDate: "बुधवार, 09 दिसंबर 2026 • प्रातः 10:00 बजे",
+          subtitle: "विघ्नहर्ता श्री गणेश की प्रथम आराधना एवं पत्रिका स्थापना",
+          gradient: "from-amber-500/15 via-royal-gold/10 to-transparent",
+          iconGradient: "from-amber-600 to-yellow-500",
+          border: "border-amber-500/40",
+          accentColor: "text-amber-700 dark:text-amber-400",
+          badgeBg: "bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 border-amber-300 dark:border-amber-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261209T100000",
+          calEndDate: "20261209T110000"
+        },
+        {
+          id: "mandap",
+          num: "02",
+          icon: "fa-hands-praying",
+          title: "मण्डप मुहूर्त",
+          shortTitle: "मण्डप",
+          dayGroup: "day1",
+          dayText: "दिन 1 • 09 दिसंबर",
+          date: "बुधवार, 09 दिसंबर 2026",
+          time: "प्रातः 11:00 बजे",
+          fullDate: "बुधवार, 09 दिसंबर 2026 • प्रातः 11:00 बजे",
+          subtitle: "वेदमंत्रों की पावन ध्वनि संग मंडप प्रतिष्ठा संस्कार",
+          gradient: "from-orange-500/15 via-amber-400/10 to-transparent",
+          iconGradient: "from-orange-600 to-amber-500",
+          border: "border-orange-500/40",
+          accentColor: "text-orange-700 dark:text-orange-400",
+          badgeBg: "bg-orange-100 dark:bg-orange-950/60 text-orange-900 dark:text-orange-200 border-orange-300 dark:border-orange-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261209T110000",
+          calEndDate: "20261209T113000"
+        },
+        {
+          id: "mamera",
+          num: "03",
+          icon: "fa-gifts",
+          title: "मामेरा (भात / मायरा)",
+          shortTitle: "मामेरा",
+          dayGroup: "day1",
+          dayText: "दिन 1 • 09 दिसंबर",
+          date: "बुधवार, 09 दिसंबर 2026",
+          time: "प्रातः 11:30 बजे",
+          fullDate: "बुधवार, 09 दिसंबर 2026 • प्रातः 11:30 बजे",
+          subtitle: "ननिहाल पक्ष द्वारा अपार स्नेह एवं मायरा अर्पण",
+          gradient: "from-rose-500/15 via-pink-400/10 to-transparent",
+          iconGradient: "from-rose-600 to-pink-500",
+          border: "border-rose-500/40",
+          accentColor: "text-rose-700 dark:text-rose-400",
+          badgeBg: "bg-rose-100 dark:bg-rose-950/60 text-rose-900 dark:text-rose-200 border-rose-300 dark:border-rose-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261209T113000",
+          calEndDate: "20261209T130000"
+        },
+        {
+          id: "haldi",
+          num: "04",
+          icon: "fa-sun",
+          title: "हल्दी समारोह",
+          shortTitle: "हल्दी",
+          dayGroup: "day1",
+          dayText: "दिन 1 • 09 दिसंबर",
+          date: "बुधवार, 09 दिसंबर 2026",
+          time: "दोपहर 02:30 बजे",
+          fullDate: "बुधवार, 09 दिसंबर 2026 • दोपहर 02:30 बजे",
+          subtitle: "केसर-हल्दी का स्नेहिल उबटन, मंगल गीत व उल्लास",
+          gradient: "from-yellow-400/20 via-amber-300/15 to-transparent",
+          iconGradient: "from-yellow-500 to-amber-400",
+          border: "border-yellow-400/60",
+          accentColor: "text-yellow-800 dark:text-yellow-400",
+          badgeBg: "bg-yellow-100 dark:bg-yellow-950/60 text-yellow-900 dark:text-yellow-200 border-yellow-400 dark:border-yellow-700",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261209T143000",
+          calEndDate: "20261209T170000"
+        },
+        {
+          id: "sangeet",
+          num: "05",
+          icon: "fa-guitar",
+          title: "संगीत बेला",
+          shortTitle: "संगीत बेला",
+          dayGroup: "day1",
+          dayText: "दिन 1 • 09 दिसंबर",
+          date: "बुधवार, 09 दिसंबर 2026",
+          time: "सायं 07:00 बजे से",
+          fullDate: "बुधवार, 09 दिसंबर 2026 • सायं 07:00 बजे से",
+          subtitle: "सुरमयी धुनें, पारिवारिक नृत्य एवं डांडिया रास",
+          gradient: "from-purple-600/15 via-fuchsia-500/10 to-transparent",
+          iconGradient: "from-purple-600 to-indigo-500",
+          border: "border-purple-500/40",
+          accentColor: "text-purple-700 dark:text-purple-400",
+          badgeBg: "bg-purple-100 dark:bg-purple-950/60 text-purple-900 dark:text-purple-200 border-purple-300 dark:border-purple-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261209T190000",
+          calEndDate: "20261209T235900"
+        },
+        {
+          id: "sagai",
+          num: "06",
+          icon: "fa-ring",
+          title: "सगाई संस्कार",
+          shortTitle: "सगाई",
+          dayGroup: "day2",
+          dayText: "दिन 2 • 10 दिसंबर",
+          date: "गुरुवार, 10 दिसंबर 2026",
+          time: "प्रातः 11:00 बजे",
+          fullDate: "गुरुवार, 10 दिसंबर 2026 • प्रातः 11:00 बजे",
+          subtitle: "वर-वधू का पावन वाग्दान एवं अंगूठी आदान-प्रदान",
+          gradient: "from-emerald-600/15 via-teal-500/10 to-transparent",
+          iconGradient: "from-emerald-600 to-teal-500",
+          border: "border-emerald-500/40",
+          accentColor: "text-emerald-700 dark:text-emerald-400",
+          badgeBg: "bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 border-emerald-300 dark:border-emerald-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261210T110000",
+          calEndDate: "20261210T140000"
+        },
+        {
+          id: "reception",
+          num: "07",
           icon: "fa-champagne-glasses",
           title: "आशीर्वाद समारोह एवं स्वरुचिभोज",
           shortTitle: "आशीर्वाद समारोह",
           dayGroup: "day2",
-          dayText: "गुरुवार • 10 दिसंबर 2026",
+          dayText: "दिन 2 • 10 दिसंबर",
           date: "गुरुवार, 10 दिसंबर 2026",
           time: "सायं 07:00 बजे से",
           fullDate: "गुरुवार, 10 दिसंबर 2026 • सायं 07:00 बजे से",
@@ -1058,8 +1228,31 @@
           mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
           calStartDate: "20261210T190000",
           calEndDate: "20261210T233000"
+        },
+        {
+          id: "phere",
+          num: "08",
+          icon: "fa-fire",
+          title: "शुभ लग्न (पाणिग्रहण संस्कार)",
+          shortTitle: "शुभ लग्न",
+          dayGroup: "day2",
+          dayText: "दिन 2 • 10 दिसंबर",
+          date: "गुरुवार, 10 दिसंबर 2026",
+          time: "रात्रि 01:00 बजे (मध्यरात्रि)",
+          fullDate: "गुरुवार, 10 दिसंबर 2026 • रात्रि 01:00 बजे (मध्यरात्रि)",
+          subtitle: "पवित्र अग्नि के समक्ष सात फेरे, सात वचन व सिंदूरदान",
+          gradient: "from-red-600/15 via-amber-500/10 to-transparent",
+          iconGradient: "from-red-600 to-orange-500",
+          border: "border-red-500/50",
+          accentColor: "text-red-700 dark:text-red-400",
+          badgeBg: "bg-red-100 dark:bg-red-950/60 text-red-900 dark:text-red-200 border-red-300 dark:border-red-800",
+          venue: "पूनम रिसॉर्ट्स, महू इंदौर रोड",
+          mapUrl: "https://maps.app.goo.gl/LDuV11ndoLZgCsp47",
+          calStartDate: "20261211T010000",
+          calEndDate: "20261211T040000"
         }
-      ]    };
+      ]
+    };
 
     let activeEventIndex = 0;
     let activePerson = 'bride';
@@ -1280,19 +1473,122 @@
       });
     }
 
-                        /**
+                    /**
      * ============================================================
-     * 4. CEREMONY EVENTS - RECEPTION ONLY FORMAT
+     * 4. CEREMONY EVENTS - IN-PLACE INTERACTIVE NAVIGATION
      * ============================================================
      */
     activeEventIndex = 0;
+    let currentEventDayFilter = 'all';
+
+    function setEventDayFilter(filterKey) {
+      currentEventDayFilter = filterKey;
+      
+      const btnAll = document.getElementById('dayFilterAll');
+      const btnDay1 = document.getElementById('dayFilterDay1');
+      const btnDay2 = document.getElementById('dayFilterDay2');
+
+      const activeClass = "px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all border flex items-center gap-1 shadow-sm cursor-pointer bg-royal-maroon dark:bg-royal-gold text-white dark:text-royal-darkbg border-transparent ring-2 ring-royal-gold/50 scale-105";
+      const inactiveClass = "px-3 py-1 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all border flex items-center gap-1 shadow-sm cursor-pointer bg-white/90 dark:bg-royal-darkcard/90 text-stone-900 dark:text-stone-100 border-royal-gold/40 hover:bg-royal-gold/15";
+
+      if (btnAll) btnAll.className = filterKey === 'all' ? activeClass : inactiveClass;
+      if (btnDay1) btnDay1.className = filterKey === 'day1' ? activeClass : inactiveClass;
+      if (btnDay2) btnDay2.className = filterKey === 'day2' ? activeClass : inactiveClass;
+
+      // If active event is filtered out, select first event in that day
+      const currentEv = WEDDING_CONFIG.events[activeEventIndex];
+      if (filterKey !== 'all' && currentEv && currentEv.dayGroup !== filterKey) {
+        const firstVisibleIdx = WEDDING_CONFIG.events.findIndex(e => e.dayGroup === filterKey);
+        if (firstVisibleIdx !== -1) {
+          activeEventIndex = firstVisibleIdx;
+        }
+      }
+
+      renderEventTabs();
+      renderActiveEventCard();
+    }
 
     function renderEventTabs() {
-      // In Reception Only format, active card is displayed directly
+      const tabList = document.getElementById('eventTabList');
+      if (!tabList) return;
+      tabList.innerHTML = '';
+
+      WEDDING_CONFIG.events.forEach((ev, idx) => {
+        // Filter out if not in selected day
+        if (currentEventDayFilter !== 'all' && ev.dayGroup !== currentEventDayFilter) {
+          return;
+        }
+
+        const isActive = (idx === activeEventIndex);
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = `ceremony-tab-btn-${ev.id}`;
+        btn.setAttribute('aria-label', `${ev.title}`);
+        
+        // Mobile: flex-shrink-0 w-[120px] for swipeable horizontal carousel
+        // Tablet/Desktop: sm:w-auto for responsive 4-column grid
+        const baseClasses = "flex-shrink-0 w-[120px] sm:w-auto snap-start p-2 sm:p-2.5 md:p-3 rounded-xl sm:rounded-2xl transition-all duration-200 cursor-pointer flex flex-col justify-between";
+
+        if (isActive) {
+          btn.className = `${baseClasses} bg-gradient-to-br from-royal-maroon via-[#5e0816] to-[#45050f] dark:from-royal-gold dark:via-amber-400 dark:to-yellow-500 text-white dark:text-royal-darkbg border-2 border-royal-gold shadow-lg ring-2 ring-royal-gold/60 scale-[1.02]`;
+        } else {
+          btn.className = `${baseClasses} bg-white/95 dark:bg-royal-darkcard/90 text-stone-800 dark:text-stone-100 border-2 border-royal-gold/30 hover:border-royal-gold hover:bg-royal-gold/10 hover:shadow-md`;
+        }
+
+        btn.innerHTML = `
+          <div class="flex items-center justify-between gap-1 w-full mb-1">
+            <span class="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full text-[10px] sm:text-[11px] font-black ${
+              isActive 
+                ? 'bg-royal-gold text-white dark:bg-royal-darkbg dark:text-royal-gold shadow-xs' 
+                : 'bg-royal-gold/20 text-royal-maroon dark:text-royal-gold'
+            }">${ev.num}</span>
+            <span class="text-[9px] sm:text-[10px] font-bold ${
+              isActive 
+                ? 'text-amber-200 dark:text-royal-darkbg/90' 
+                : 'text-stone-700 dark:text-stone-300'
+            }">${ev.dayGroup === 'day1' ? '09 दिस.' : '10 दिस.'}</span>
+          </div>
+
+          <div class="flex items-center gap-1.5 sm:gap-2 my-0.5">
+            <span class="w-5 h-5 sm:w-7 sm:h-7 rounded-lg ${
+              isActive
+                ? 'bg-white/20 dark:bg-black/15 text-white dark:text-royal-darkbg'
+                : 'bg-royal-gold/15 text-royal-maroon dark:text-royal-gold'
+            } flex items-center justify-center text-xs sm:text-sm flex-shrink-0">
+              <i class="fa-solid ${ev.icon}"></i>
+            </span>
+            <span class="font-bold text-[11px] sm:text-xs md:text-sm font-hindi leading-tight tracking-tight truncate ${
+              isActive ? 'text-white dark:text-royal-darkbg' : 'text-stone-900 dark:text-stone-100'
+            }">${ev.shortTitle}</span>
+          </div>
+
+          <div class="mt-1 pt-0.5 border-t ${isActive ? 'border-white/20 dark:border-black/20' : 'border-royal-gold/20'} flex items-center justify-between text-[9px] sm:text-[10px]">
+            <span class="${isActive ? 'text-amber-200 dark:text-royal-darkbg/80 font-semibold' : 'text-stone-700 dark:text-stone-300'} font-hindi truncate">
+              ${ev.time.replace('बजे', '').trim()}
+            </span>
+            ${isActive ? '<span class="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-royal-gold dark:text-royal-darkbg bg-white/20 dark:bg-black/15 px-1 py-0.2 rounded-full whitespace-nowrap">● सक्रिय</span>' : ''}
+          </div>
+        `;
+
+        btn.addEventListener('click', () => {
+          activeEventIndex = idx;
+          renderEventTabs();
+          renderActiveEventCard();
+        });
+
+        tabList.appendChild(btn);
+
+        if (isActive) {
+          // Keep active button centered in horizontal strip on mobile
+          setTimeout(() => {
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }, 60);
+        }
+      });
     }
 
     function renderActiveEventCard() {
-      const ev = WEDDING_CONFIG.events[0];
+      const ev = WEDDING_CONFIG.events[activeEventIndex];
       const container = document.getElementById('activeEventCardContainer');
       if (!container || !ev) return;
 
@@ -1301,70 +1597,172 @@
       const calLocation = encodeURIComponent(ev.venue);
       const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=${ev.calStartDate}/${ev.calEndDate}&details=${calDetails}&location=${calLocation}`;
 
+      const totalEvents = WEDDING_CONFIG.events.length;
+      const hasPrev = activeEventIndex > 0;
+      const hasNext = activeEventIndex < totalEvents - 1;
+
       container.innerHTML = `
-        <div class="bg-gradient-to-b ${ev.gradient} to-white/95 dark:to-royal-darkcard/95 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-7 border-2 ${ev.border} shadow-xl text-left transition-all duration-300">
+        <div class="bg-gradient-to-b ${ev.gradient} to-white/95 dark:to-royal-darkcard/95 rounded-2xl sm:rounded-3xl p-3 sm:p-5 md:p-6 border-2 ${ev.border} shadow-xl text-left transition-all duration-300">
           
-          <!-- Top Row: Badge -->
-          <div class="flex items-center justify-between gap-1 pb-2 sm:pb-3 border-b border-royal-gold/25 font-hindi text-xs">
-            <span class="text-xs font-black uppercase tracking-wider text-royal-maroon dark:text-royal-gold">
-              मुख्य मांगलिक समारोह
-            </span>
-            <span class="text-[11px] sm:text-xs font-bold px-3 py-1 rounded-full ${ev.badgeBg} border">
+          <!-- Top Row: Counter and Day Group -->
+          <div class="flex items-center justify-between gap-1 pb-1.5 sm:pb-2.5 border-b border-royal-gold/25 font-hindi text-xs">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-gradient-to-tr ${ev.iconGradient} text-white flex items-center justify-center text-[10px] sm:text-xs font-black shadow-xs flex-shrink-0">
+                ${ev.num}
+              </span>
+              <span class="text-[10px] sm:text-xs font-black uppercase tracking-wider text-royal-maroon dark:text-royal-gold">
+                कार्यक्रम 0${activeEventIndex + 1} / 0${totalEvents}
+              </span>
+            </div>
+            <span class="text-[9px] sm:text-xs font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full ${ev.badgeBg} border">
               ${ev.dayText}
             </span>
           </div>
 
           <!-- Main Event Title & Icon -->
-          <div class="mt-3.5 sm:mt-5 flex items-start gap-3 sm:gap-4">
-            <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr ${ev.iconGradient} text-white shadow-md flex items-center justify-center text-xl sm:text-3xl flex-shrink-0">
+          <div class="mt-2.5 sm:mt-3.5 flex items-start gap-2.5 sm:gap-4">
+            <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-tr ${ev.iconGradient} text-white shadow-md flex items-center justify-center text-base sm:text-2xl flex-shrink-0">
               <i class="fa-solid ${ev.icon}"></i>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="font-rozha text-xl sm:text-2xl md:text-3xl text-royal-maroon dark:text-royal-gold font-bold leading-tight">
+              <h3 class="font-rozha text-base sm:text-2xl md:text-3xl text-royal-maroon dark:text-royal-gold font-bold leading-tight">
                 ${ev.title}
               </h3>
-              <p class="text-xs sm:text-sm text-stone-700 dark:text-stone-300 italic mt-1 font-hindi border-l-2 border-royal-gold/60 pl-2.5">
+              <p class="text-[10px] sm:text-xs md:text-sm text-stone-700 dark:text-stone-300 italic mt-0.5 sm:mt-1 font-hindi border-l-2 border-royal-gold/60 pl-2 sm:pl-2.5 truncate sm:whitespace-normal">
                 "${ev.subtitle}"
               </p>
             </div>
           </div>
 
           <!-- Date, Time & Venue Highlight Box -->
-          <div class="mt-4 sm:mt-5 p-3.5 sm:p-5 rounded-2xl bg-white/90 dark:bg-[#111722]/90 border border-royal-gold/30 shadow-inner space-y-2 font-hindi text-xs sm:text-sm">
-            <div class="flex items-center gap-2.5 font-bold text-stone-900 dark:text-stone-100">
-              <i class="fa-regular fa-calendar-check text-royal-gold text-base sm:text-lg w-5 text-center flex-shrink-0"></i>
-              <span>दिनांक: ${ev.date}</span>
+          <div class="mt-2.5 sm:mt-4 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/90 dark:bg-[#111722]/90 border border-royal-gold/30 shadow-inner space-y-1 sm:space-y-2 font-hindi text-[11px] sm:text-sm">
+            <div class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100">
+              <i class="fa-regular fa-calendar-check text-royal-gold text-xs sm:text-base w-4 sm:w-5 text-center flex-shrink-0"></i>
+              <span>${ev.date}</span>
             </div>
-            <div class="flex items-center gap-2.5 font-black text-royal-maroon dark:text-royal-gold text-sm sm:text-base">
-              <i class="fa-regular fa-clock text-royal-gold text-base sm:text-lg w-5 text-center flex-shrink-0"></i>
-              <span class="tracking-wide">शुभ समय: ${ev.time}</span>
+            <div class="flex items-center gap-2 font-black text-royal-maroon dark:text-royal-gold">
+              <i class="fa-regular fa-clock text-royal-gold text-xs sm:text-base w-4 sm:w-5 text-center flex-shrink-0"></i>
+              <span class="tracking-wide">शुभ मुहूर्त / समय: ${ev.time}</span>
             </div>
-            <div class="flex items-start gap-2.5 text-stone-800 dark:text-stone-200">
-              <i class="fa-solid fa-location-dot text-royal-gold text-base sm:text-lg w-5 text-center mt-0.5 flex-shrink-0"></i>
-              <span class="font-medium">${ev.venue}</span>
+            <div class="flex items-start gap-2 text-stone-800 dark:text-stone-200">
+              <i class="fa-solid fa-location-dot text-royal-gold text-xs sm:text-base w-4 sm:w-5 text-center mt-0.5 flex-shrink-0"></i>
+              <span class="font-medium truncate sm:whitespace-normal">${ev.venue}</span>
             </div>
           </div>
 
           <!-- Action Buttons (Google Maps & Calendar: 2-col on mobile, inline on tablet) -->
-          <div class="mt-4 sm:mt-5 grid grid-cols-2 gap-2.5 sm:gap-4 font-hindi">
-            <a href="${ev.mapUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-royal-maroon dark:bg-royal-gold hover:opacity-95 text-white dark:text-royal-darkbg px-3.5 py-2.5 rounded-full text-xs font-bold shadow-md active:scale-95 transition-all text-center">
-              <i class="fa-solid fa-diamond-turn-right text-xs"></i>
+          <div class="mt-2.5 sm:mt-4 grid grid-cols-2 gap-2 sm:gap-3 font-hindi">
+            <a href="${ev.mapUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-royal-maroon dark:bg-royal-gold hover:opacity-95 text-white dark:text-royal-darkbg px-2 py-1.5 sm:px-4 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold shadow-md active:scale-95 transition-all text-center">
+              <i class="fa-solid fa-diamond-turn-right text-[9px] sm:text-xs"></i>
               <span class="sm:hidden">📍 मैप देखें</span>
               <span class="hidden sm:inline">📍 गूगल मैप्स पर देखें</span>
             </a>
-            <a href="${googleCalUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white dark:bg-stone-800 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 border border-royal-gold/40 px-3.5 py-2.5 rounded-full text-xs font-bold active:scale-95 transition-all text-center">
-              <i class="fa-regular fa-calendar-plus text-royal-gold text-xs"></i>
+            <a href="${googleCalUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white dark:bg-stone-800 hover:bg-stone-100 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 border border-royal-gold/40 px-2 py-1.5 sm:px-4 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold active:scale-95 transition-all text-center">
+              <i class="fa-regular fa-calendar-plus text-royal-gold text-[9px] sm:text-xs"></i>
               <span class="sm:hidden">📅 कैलेंडर</span>
               <span class="hidden sm:inline">📅 कैलेंडर में जोड़ें</span>
             </a>
+          </div>
+
+          <!-- Quick Navigation: Prev / Next Event within the card -->
+          <div class="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-royal-gold/25 flex items-center justify-between gap-1 sm:gap-2 font-hindi text-xs">
+            <button type="button" onclick="navigateEvent(-1)" ${!hasPrev ? 'disabled' : ''} class="px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-royal-gold/40 font-bold transition-all inline-flex items-center gap-1 sm:gap-1.5 ${
+              hasPrev 
+                ? 'bg-white/90 dark:bg-royal-darkcard text-royal-maroon dark:text-royal-gold hover:bg-royal-gold/15 cursor-pointer shadow-xs active:scale-95' 
+                : 'opacity-40 cursor-not-allowed text-stone-400 border-stone-300 dark:border-stone-700'
+            }">
+              <i class="fa-solid fa-arrow-left text-[9px] sm:text-[10px]"></i>
+              <span class="sm:hidden">पिछला</span>
+              <span class="hidden sm:inline">पिछला कार्यक्रम</span>
+            </button>
+
+            <span class="text-[9px] sm:text-[11px] font-bold text-royal-maroon dark:text-royal-gold px-1 sm:px-2 whitespace-nowrap">
+              रस्म ${ev.num} / 0${totalEvents}
+            </span>
+
+            <button type="button" onclick="navigateEvent(1)" ${!hasNext ? 'disabled' : ''} class="px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-royal-gold/40 font-bold transition-all inline-flex items-center gap-1 sm:gap-1.5 ${
+              hasNext 
+                ? 'bg-white/90 dark:bg-royal-darkcard text-royal-maroon dark:text-royal-gold hover:bg-royal-gold/15 cursor-pointer shadow-xs active:scale-95' 
+                : 'opacity-40 cursor-not-allowed text-stone-400 border-stone-300 dark:border-stone-700'
+            }">
+              <span class="sm:hidden">अगला</span>
+              <span class="hidden sm:inline">अगला कार्यक्रम</span>
+              <i class="fa-solid fa-arrow-right text-[9px] sm:text-[10px]"></i>
+            </button>
           </div>
 
         </div>
       `;
     }
 
-    function initEventsAccordion() {}
-    function renderCeremonyPills() {}
+    function navigateEvent(step) {
+      const nextIndex = activeEventIndex + step;
+      if (nextIndex >= 0 && nextIndex < WEDDING_CONFIG.events.length) {
+        activeEventIndex = nextIndex;
+        const targetEv = WEDDING_CONFIG.events[activeEventIndex];
+        if (currentEventDayFilter !== 'all' && targetEv && targetEv.dayGroup !== currentEventDayFilter) {
+          setEventDayFilter('all');
+        } else {
+          renderEventTabs();
+          renderActiveEventCard();
+        }
+      }
+    }
+
+    function initEventsAccordion() {
+      const toggleAllEventsBtn = document.getElementById('toggleAllEventsBtn');
+      const allEventsListContainer = document.getElementById('allEventsListContainer');
+      const toggleAllEventsText = document.getElementById('toggleAllEventsText');
+      const toggleAllEventsIcon = document.getElementById('toggleAllEventsIcon');
+      if (!toggleAllEventsBtn || !allEventsListContainer) return;
+
+      let isAllEventsOpen = false;
+
+      toggleAllEventsBtn.addEventListener('click', () => {
+        isAllEventsOpen = !isAllEventsOpen;
+        if (isAllEventsOpen) {
+          allEventsListContainer.classList.remove('hidden');
+          renderAllEventsList();
+          if (toggleAllEventsText) toggleAllEventsText.textContent = 'सूची छुपाएं';
+          if (toggleAllEventsIcon) toggleAllEventsIcon.className = 'fa-solid fa-chevron-up text-[9px] sm:text-[10px] text-royal-gold';
+        } else {
+          allEventsListContainer.classList.add('hidden');
+          if (toggleAllEventsText) toggleAllEventsText.textContent = 'सभी 8 कार्यक्रम एक साथ सूची रूप में देखें';
+          if (toggleAllEventsIcon) toggleAllEventsIcon.className = 'fa-solid fa-chevron-down text-[9px] sm:text-[10px] text-royal-gold';
+        }
+      });
+    }
+
+    function renderAllEventsList() {
+      const container = document.getElementById('allEventsListContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      WEDDING_CONFIG.events.forEach((ev, idx) => {
+        const item = document.createElement('div');
+        item.className = "bg-white/80 dark:bg-royal-darkcard/80 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-royal-gold/30 text-xs shadow-xs font-hindi hover:border-royal-gold transition-all";
+        item.innerHTML = `
+          <div class="flex items-center justify-between font-bold text-royal-maroon dark:text-royal-gold text-[10px] sm:text-xs">
+            <span class="flex items-center gap-1.5 sm:gap-2">
+              <span class="w-5 h-5 rounded-full bg-royal-gold/20 text-royal-gold-dark dark:text-royal-gold flex items-center justify-center text-[10px] font-black">${ev.num}</span>
+              <i class="fa-solid ${ev.icon} text-royal-gold"></i>
+              <span>${ev.title}</span>
+            </span>
+            <span class="text-[9px] sm:text-[11px] text-stone-600 dark:text-stone-300">${ev.date.split(',')[1] || ev.date} • ${ev.time}</span>
+          </div>
+          <div class="mt-1 sm:mt-2 flex items-center justify-between text-stone-700 dark:text-stone-300 text-[9px] sm:text-[11px]">
+            <span class="truncate"><i class="fa-solid fa-location-dot text-royal-gold mr-1"></i>${ev.venue}</span>
+            <a href="${ev.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-royal-maroon dark:text-royal-gold font-bold hover:underline inline-flex items-center gap-1 flex-shrink-0 ml-2">
+              <span>मैप →</span>
+            </a>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    // Compatibility stubs
+    function renderCeremonyPills() { renderEventTabs(); }
     function renderEventsGrid() { renderActiveEventCard(); }
 
     /**
